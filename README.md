@@ -1,2 +1,2 @@
 # my-devs
-here I push my daily DSA problems
+here I push my solved DSA problems
