@@ -7,6 +7,9 @@ public class Main {
         ob1.InsertAtTail(3);
         ob1.insertAt(4,2);
         ob1.print(ob1.head);
-        ob1.search(4);
+        ob1.search(3);
+        ob1.delete(3);
+        ob1.print(ob1.head);
+        ob1.search(3);
     }
 }

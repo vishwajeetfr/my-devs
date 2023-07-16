@@ -51,7 +51,17 @@ public class LL
             temp= temp.next;
             count++;
         }
-        System.out.println("value" + " is at " + count);
+        System.out.println("value " + val + " is at " + count);
     }
-
+    void delete(int index)
+    {
+        Node temp = head;
+        for(int i =2; i<index;i++)
+        {
+            temp = temp.next;
+        }
+        Node temp2 = temp.next;
+        temp.next = temp2.next;
+        System.out.println("index "+index+" has been deleted");
+    }
 }
