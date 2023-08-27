@@ -35,27 +35,27 @@ public class WordGame {
 
     void iterate(char c)
     {
-     for(int i=0;i<n;i++)
-     {
-         if(ch[i] == c)
-         {
-             out[i] = c;
-         }
-     }
+        for(int i=0;i<n;i++)
+        {
+            if(ch[i] == c)
+            {
+                out[i] = c;
+            }
+        }
         System.out.println(new String(out));
 
         for(char q : out)
-     {
-         int count = 0;
-         if(q=='-')
-         {
-             count++;
-         }
-         if(count==n)
-         {
-             System.out.println("You guessed it!!");
-         }
-     }
+        {
+            int count = 0;
+            if(q=='-')
+            {
+                count++;
+            }
+            if(count==n)
+            {
+                System.out.println("You guessed it!!");
+            }
+        }
     }
 
 }
