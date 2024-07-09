@@ -1,0 +1,41 @@
+Problem Statement:
+Given a string s and a string dictionary d, find the longest string in the dictionary that can be 
+formed by deleting some characters of the given string. If there are more than one possible results, 
+return the longest word with the smallest lexicographical order. If there is no possible result, return the empty string.
+
+
+
+//java Solution
+class Solution {
+   static String result="";
+    static String findLongestWord(String S, List<String> d) 
+    {
+        for(String str : d)
+        {if(isSubsequence(str,S)){
+         if(str.length() > result.length() || (str.length() == result.length() && str.compareTo(result) < 0))
+            {
+                result=str;
+            }
+        }
+        }
+        String tem = result;
+        result="";
+        return tem;
+    }
+    static boolean isSubsequence(String str,String s)
+    {
+        int i=0;
+        int j=0;
+        
+        while(i<str.length() && j<s.length())
+        {
+            if(str.charAt(i)==s.charAt(j))
+            {
+                i++;
+            }
+            j++;
+        }
+        
+        return i==str.length();
+    }
+}
